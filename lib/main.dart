@@ -223,120 +223,114 @@ class _MyAppState extends State<MyApp> {
                         scrollDirection: Axis.vertical,
                         children: [
                           Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                      child: DropdownButton(
-                                        hint: Text("Veg/Non-Veg"),
-                                        onChanged: handleVegNonVeg,
-                                        items: const [
-                                          DropdownMenuItem(
-                                            child: Text("Veg"),
-                                            value: "Veg",
-                                          ),
-                                          DropdownMenuItem(
-                                            child: Text("Non Veg"),
-                                            value: "Non Veg",
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Container(
-                                      child: Column(
-                                        children: [
-                                          DropdownButton(
-                                            hint: Text("Price-Range"),
-                                            onChanged: handlePriceRange,
-                                            items: const [
-                                              DropdownMenuItem(
-                                                child: Text("0-30"),
-                                                value: "10-30",
-                                              ),
-                                              DropdownMenuItem(
-                                                child: Text("31-50"),
-                                                value: "31-50",
-                                              ),
-                                              DropdownMenuItem(
-                                                child: Text('51-80'),
-                                                value: "51-80",
-                                              ),
-                                              DropdownMenuItem(
-                                                child: Text('81-110'),
-                                                value: "81-110",
-                                              ),
-                                              DropdownMenuItem(
-                                                child: Text('111-140'),
-                                                value: "111-140",
-                                              ),
-                                              DropdownMenuItem(
-                                                child: Text('141-200'),
-                                                value: "141-200",
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Container(
-                                      child: DropdownButton(
-                                        hint: Text("Available Food"),
-                                        onChanged: handleFoodTypeChange,
-                                        items:  [
-                                          DropdownMenuItem(
-                                            child: Text("Dosa"),
-                                            value: "Dosa",
-                                          ),
-                                          DropdownMenuItem(
-                                            child: Text("Biriyani"),
-                                            value: "Biriyani",
-                                          ),
-                                          DropdownMenuItem(
-                                            child: Text("Fried Rice"),
-                                            value: "Fried Rice",
-                                          ),
-                                          DropdownMenuItem(
-                                            child: Text("Noodles"),
-                                            value: "Noodles",
-                                          ),
-                                          DropdownMenuItem(
-                                            child: Text("Shawarma/Roll"),
-                                            value: "Shawrama/Roll",
-                                          ),
-                                          DropdownMenuItem(
-                                            child: Text("Chat"),
-                                            value: "Chat",
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Container(
-                                      child: ElevatedButton(
-                                        onPressed: _handleSearchBtnClick,
-                                        child: Text("Search"),
-                                        style: ElevatedButton.styleFrom(
-                                          backgroundColor: Colors.red,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    child: DropdownButton(
+                                      hint: Text("Veg/Non-Veg"),
+                                      onChanged: handleVegNonVeg,
+                                      items: const [
+                                        DropdownMenuItem(
+                                          child: Text("Veg"),
+                                          value: "Veg",
                                         ),
+                                        DropdownMenuItem(
+                                          child: Text("Non Veg"),
+                                          value: "Non Veg",
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Column(
+                                      children: [
+                                        DropdownButton(
+                                          hint: Text("Price-Range"),
+                                          onChanged: handlePriceRange,
+                                          items: const [
+                                            DropdownMenuItem(
+                                              child: Text("0-30"),
+                                              value: "10-30",
+                                            ),
+                                            DropdownMenuItem(
+                                              child: Text("31-50"),
+                                              value: "31-50",
+                                            ),
+                                            DropdownMenuItem(
+                                              child: Text('51-80'),
+                                              value: "51-80",
+                                            ),
+                                            DropdownMenuItem(
+                                              child: Text('81-110'),
+                                              value: "81-110",
+                                            ),
+                                            DropdownMenuItem(
+                                              child: Text('111-140'),
+                                              value: "111-140",
+                                            ),
+                                            DropdownMenuItem(
+                                              child: Text('141-200'),
+                                              value: "141-200",
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    child: DropdownButton(
+                                      hint: Text("Available Food"),
+                                      onChanged: handleFoodTypeChange,
+                                      items:  [
+                                        DropdownMenuItem(
+                                          child: Text("Dosa"),
+                                          value: "Dosa",
+                                        ),
+                                        DropdownMenuItem(
+                                          child: Text("Biriyani"),
+                                          value: "Biriyani",
+                                        ),
+                                        DropdownMenuItem(
+                                          child: Text("Fried Rice"),
+                                          value: "Fried Rice",
+                                        ),
+                                        DropdownMenuItem(
+                                          child: Text("Noodles"),
+                                          value: "Noodles",
+                                        ),
+                                        DropdownMenuItem(
+                                          child: Text("Shawarma/Roll"),
+                                          value: "Shawrama/Roll",
+                                        ),
+                                        DropdownMenuItem(
+                                          child: Text("Chat"),
+                                          value: "Chat",
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    child: ElevatedButton(
+                                      onPressed: _handleSearchBtnClick,
+                                      child: Text("Search"),
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: Colors.red,
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
                           ListView(
                                 scrollDirection: Axis.vertical,
                                 shrinkWrap: true,
